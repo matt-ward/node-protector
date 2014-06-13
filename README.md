@@ -1,5 +1,6 @@
 mongoose-protector
 =========
+This is a work in progress, I am currently using it on my own project, but I would not advise using it for your own at this point.
 
 mongoose-protector is a mongoose plugin that provides attribute level access control on your mongoose models. Protector was designed to work with your existing access control, it only will protect your model, not your routes.
 
@@ -7,7 +8,7 @@ mongoose-protector is a mongoose plugin that provides attribute level access con
 Version
 ----
 
-0.0.0
+0.0.1
 
 
 
