@@ -26,5 +26,8 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-mocha-test": "^0.10.2",
     "mongoose": "^3.8.11"
+  },
+  "dependencies": {
+    "mongoose": "^3.8.12"
   }
 }
