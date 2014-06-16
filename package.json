@@ -1,6 +1,6 @@
 {
   "name": "mongoose-protector",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An attribute level access control module. Protects resources as one would expect from regular ACL, but allows for configuration to protect attributes of a given resource.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/matt-ward/node-protector.git"
   },
   "keywords": [
-    "acl"
+    "acl", "mongoose"
   ],
   "author": "Matt Ward <ward.matthewr@gmail.com> (http://mattwardsoftware.wordpress.com/)",
   "license": "MIT",
