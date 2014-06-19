@@ -33,11 +33,10 @@ mongoose.model('Person', PersonSchema)
         {
             role: {
                 name: 'admin',
-                visible: {
-                    '*':'*'
-                },
-                where: {
-                
+                allow: {
+
+                    "*": "*"
+
                 }
             }
         
@@ -45,14 +44,21 @@ mongoose.model('Person', PersonSchema)
         {
             role: {
                 name: 'guest',
-                visible: {
-                    FirstName: 1
-                },
-                where: {
-                
-                    FirstName: "$dynamic.firstName"
-                
+                allow: {
+                    read: {
+
+                        properties: {
+                            FirstName: 1
+                        },
+                        where: {
+
+                            FirstName: "$dynamic.firstName"
+
+                        }
+
+                    }
                 }
+
             }
         
         }
@@ -95,11 +101,26 @@ A rule is an object of the following form (note, the object will be extended in 
 {
     role: {
         name: 'admin'
-        visible: {
-        
-        },
-        where: {
-        
+        allow: {
+            create: {
+
+            },
+            read: {
+                properties: {
+
+                },
+                where: {
+
+                }
+
+            },
+            update: {
+
+            },
+            delete: {
+
+            }
+
         }
     
     }
@@ -110,7 +131,18 @@ A rule is an object of the following form (note, the object will be extended in 
 ##Role
 ####.name
 A string of your choice, used to identify your role.
-####.visible
+####.allow
+An object that contains your CRUD info for the role
+
+##Allow
+####.create
+####.read
+####.update
+####.delete
+
+If you want your role to have the ability to perform CRUD operations, you'll need to include one or more of the above properties.
+
+####.properties
 An object that basically is your attribute level access control. These are the fields you want returned to that particular user.
 ####.where
 Where works exactly like a query in Mongodb. So, if you want your role to only fetch certain documents, you can specify that in where, using any standard mongoDB query.
@@ -130,12 +162,16 @@ $dynamic is a keyword of this plugin, and it allows you to dynamically define "w
 {
             role: {
                 name: 'guest',
-                visible: {
-                    '*': '*' // allows all fields to be visible
-                },
-                where: {
-                    // this is dynamic
-                    name: "$dynamic.name"
+                allow: {
+                    read: {
+                        properties: {
+                            '*': '*' // allows all fields to be visible
+                        },
+                        where: {
+                            // this is dynamic
+                            name: "$dynamic.name"
+                        }
+                    }
                 }
             }
 
