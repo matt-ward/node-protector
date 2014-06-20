@@ -11,7 +11,8 @@
     "url": "https://github.com/matt-ward/node-protector.git"
   },
   "keywords": [
-    "acl", "mongoose"
+    "acl",
+    "mongoose"
   ],
   "author": "Matt Ward <ward.matthewr@gmail.com> (http://mattwardsoftware.wordpress.com/)",
   "license": "MIT",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/matt-ward/node-protector",
   "devDependencies": {
     "chai": "^1.9.1",
+    "colors": "^0.6.2",
     "express": "^4.3.0",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.10.0",
