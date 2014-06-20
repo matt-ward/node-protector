@@ -1,6 +1,6 @@
 {
   "name": "mongoose-protector",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An attribute level access control module. Protects resources as one would expect from regular ACL, but allows for configuration to protect attributes of a given resource.",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,8 @@
     "mongoose": "^3.8.11"
   },
   "dependencies": {
-    "mongoose": "^3.8.12"
+    "mongoose": "^3.8.12",
+    "colors": "^0.6.2"
+
   }
 }
