@@ -11,6 +11,31 @@ npm install mongoose-protector
 ```
 
 
+Updates
+--------
+
+Just added, but still testing and adding functionality (June 20, 2014):
+
+Document#save(fn)
+
+You can now prevent or allow users from creating or updating a document using Document#save()
+
+#####note
+the properties and where keys are not enabled for this function at the moment.
+
+####Usage
+```
+var myPerson = new Person({FirstName: "Bill", LastName: "Baggins"});
+
+var userRole = 'admin';
+myPerson.protect(userRole).save(function(err, person, numberAffected) {
+
+});
+```
+
+At the moment if you don't use the callback, then an error will be thrown.
+
+
 
 Usage Quick Overview
 -----
@@ -84,8 +109,9 @@ Person.protect(role, {firstName: 'John'}).find({}, function(err, persons) {
 Currently Supported Mongoose Functions
 ----------
 
-* find()
-* findOne()
+* Model#find()
+* Model#findOne()
+* Document#save()
 
 Rules
 -----
@@ -186,7 +212,8 @@ This allows us to pass in a value at runtime. How? Like so:
 ```
 Person.protect(role, {name: 'John'}).find({}, function(err, persons) {
 
-});```
+});
+```
 
 
 License
