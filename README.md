@@ -12,6 +12,12 @@ npm install mongoose-protector
 Updates
 --------
 
+
+September 24, 2014:
+
+Just patched a bug that was causing the rules to get fudged up.
+
+
 Just added, but still testing and adding functionality (June 20, 2014):
 
 Document#save(fn)
