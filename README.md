@@ -9,24 +9,6 @@ npm install mongoose-protector
 ```
 
 
-Updates
---------
-
-
-September 24, 2014:
-
-Just patched a bug that was causing the rules to get fudged up.
-
-
-Just added, but still testing and adding functionality (June 20, 2014):
-
-Document#save(fn)
-
-You can now prevent or allow users from creating or updating a document using Document#save()
-
-#####note
-the properties and where keys are not enabled for this function at the moment.
-
 ####Usage
 ```
 var myPerson = new Person({FirstName: "Bill", LastName: "Baggins"});
