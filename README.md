@@ -9,7 +9,7 @@ npm install mongoose-protector
 ```
 
 
-####Usage
+Basic Usage
 ```
 var myPerson = new Person({FirstName: "Bill", LastName: "Baggins"});
 
